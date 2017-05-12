@@ -46,6 +46,42 @@ width:100%;
 height:100%;
 z-index:-1;
 }
+.rainbow {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 1s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 1s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 1s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
 </style>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -55,7 +91,7 @@ z-index:-1;
 <canvas width="100%" height="100%" class="snow"></canvas>
 <div class="item">
 Xwater has<br>
-<span class="lg"><?php echo($numsubs);?></span>
+<span class="lg rainbow"><?php echo($numsubs);?></span>
 <br>Subs!
 </div>
 </body>
